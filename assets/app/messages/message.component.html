@@ -1,0 +1,10 @@
+ <article class="panel panel-default">
+   <div class="panel-body" *ngIf="message.type === 'image'; else: textMessage;">
+       <img src="data:image/jpg;base64,{{message.content}}" />
+   </div>
+     <ng-template #textMessage>
+         <div class="panel-body">
+             {{message.content}}
+         </div>
+     </ng-template>
+ </article>
